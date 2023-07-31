@@ -1,0 +1,129 @@
+<!-- Box Model: 
+    - When using the box method:
+      - Adjusting height: Changes display vertically ('|'). Everything below
+        is pushed down.
+      - Adjusting width: Changes width(--). 
+        - Percents are used to cover bigger areas when needed
+            - Ex- width: 100%; -->
+  <!-- Borders:
+    - Borders can be added to a object. 
+    - Ex: border: 10px solid black;
+      - Borders take 3 values seperated by a space, thickness, style, and color.
+         - The style can be a dashed (- - -) or solid line (-----).
+      - After a border is defined, it can be altered. 
+        - Ways to alter a border:
+          - border-top: 0px;
+           The above sets the top of the border to 0, setting it to not show.
+          - The 'border-top: 0px;' has to be one level below the pre-established 
+            border.
+          - border-width:
+            Border width changes the sides of a border (duhXD), and follows
+            this structure: border-width: 0px 10px 20px 30px.
+                                        ^Top ^Right ^Bottom ^Left
+          - Border width goes in a clockwise manner. Border width also can be set by two
+            values. Ex- 
+            - border-width: 0px 20px; <-- These values become the combination
+                                          of top and bottom->1 and 3 (0px and 10px), and 2 and 4 
+                                          Left and right->(20px and 30px). 
+-->
+    <!-- Padding:
+        -  Padding adds additional space between the element and border. 
+          Ex- padding: 20px;
+      -->
+    <!-- Margin: 
+        - Margin is the area outside the border. The margin seperates what is
+          inside the border and other content outside it on a website.
+          Ex- margin: 10px; 
+      -->  
+    <!-- Padding/Margin Last Overview:
+        - Follows a similar rule to the rule for borders. The padding and border
+          are one value, while the margin and border-width are another. 
+      -->  
+  <!-- Content Division Element
+      - Used to create a box around two elements i.e. a image element and paragraph element.
+      Ex- <div></div>
+      - <div> is invisible unless CSS is applied to it. The 'div' element is placed between the opening 
+        and closing tags. 
+      - Any amount of elements can be placed in the div tags.  
+
+    - Bigger Example-
+      <body>
+        <div> /* ------------------------ */
+          <p>Hello XD!</p>              /* These two div elements form one box, separating these elments from the next div element. */
+          <img src="./smile.png"/>
+        </div> /* ----------------------- */
+        <div>
+          <p>Good Night Everyone!!</p>
+          <img src="./night.png"/>
+        </div>
+      </body>
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model</title>
+  <style>
+    /* Write CSS code here. This effects the styling of the below code. */
+    /* Set 200px width and height for the 3 div elements. */
+    div{
+      width: 200px;
+      height: 200px;
+    }
+    /*Set the margin for the <p> element in the first box for no margin i.e. "0".
+      By opening this index fle in chrome and inspecting it, the margins set to 
+      '0' will present the box with the needed margin space.*/
+    p{
+      margin: 0px;
+    }
+    /* Set the first box to have 20px padding all around, and a 10px solid black border.
+        This is accomplished by not specifying any other properties for the padding.*/
+    #first{
+      padding: 20px;
+      border: solid black 10px;
+      background-color:aquamarine;
+   }
+   /* Set this <div> to a solid black 20px border on the top and bottom, and 10px border on the left and right. 
+      Set the background color, and add values so the <div> box will touch 1 and 3 by the corner. This box will become
+      the rightmost box. The "margin-left: 260px is 260 because the 1st box is 200px wide for its base, plus 
+      the border, which is 20px. The 1st box is 10px on each side, with a over all border width of 40px(20px times 2 for 
+      each side). Because of this, and with the second and third being nearly exact copies, the total of these values is 
+      260px (200px base + 20px border + 40px border-width) because of the entire width of the first div box equaling 40px (both sides).
+      */
+   #second{
+    border: solid black;
+    border-width: 20px 10px;
+    margin-left: 260px;
+    background-color: darksalmon;
+   }
+   /* Set this <div> to a solid black 10px border. Assign a background color, and set the margins to move
+      over. margin-left: ; accomplishes this. This moves the box to line up with the 1st and 2nd div boxes.
+      */
+   #third{
+    margin-left: 40px;
+    border: 10px solid black;
+    background-color: goldenrod;
+   }
+  </style>
+</head>
+<body>
+ <!-- Create the three div elements. Add the <p> element to the first element and background
+  color.--> 
+<div id="first">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.</p>
+</div>
+<div id="second">
+  
+</div>
+<div id="third">
+</div>
+
+</body>
+
+</html>
+
+
