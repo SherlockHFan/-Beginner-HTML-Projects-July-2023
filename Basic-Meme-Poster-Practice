@@ -1,0 +1,30 @@
+<!-- Create a motivational post website. -->
+<!-- Start the index html file. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<!-- The title for the webpage is "Meme Poster"-->    
+    <title>Meme Poster</title>
+<!-- Link to the custome google font -->    
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+  </head>
+<!-- Create the title of the website and other elements in a <div class> element-->
+<!-- The body element controls the positioning of everything in the body element. 
+      This is why it is important to specify everything under this element. -->  
+<!-- Specify "class" for both div and img, enabling the code to be 
+      reused again.-->
+    <body>
+    <div class="poster">
+    <h1>MEME</h1>
+    <img class="momMeme" src="./assets/images/MompicTV.jpg">
+    <p>When your dog has a better seat then you.</p>
+  </div>
+  </body>
+</html>
+
+
+
