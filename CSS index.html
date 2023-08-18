@@ -1,0 +1,117 @@
+<!-- Cascading Style Sheets index.html -->
+<!-- CASCADING style sheet Intro-
+      What is the cascading part of CSS? 
+      The "cascading" part of CSS is a way to establish hierarchy in a website. i.e. a waterfall,
+      the code looks at the top of the waterfall first, then the middle, until reaching the bottom.
+        Example-
+          index.html
+          ------------
+          <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ol>
+
+          style.css
+          -----------
+          li{
+            color: green;
+          }
+
+          In the above example, the style.css rules will change the color of ALL the list items to 
+          green. If changed to a inline style for one:
+            <li style="color: pink">Two</li>
+            Cascading stylesheets follow these rules:
+              1. Checks the external stylesheet and applies the style.
+              2. Or checks the Internal Stylesheet and applies styles 
+                 following a style tag.
+              3. Finally checks the html for inline styles.
+          The middle item, "Two", will change to pink while the rest will remain green, following
+          the 3rd option.
+            
+    -->
+<!-- Cascading Style Sheet: CSS Category Importance-->
+<!-- CSS Position- Comes before all others-this is the rule that looks for whether a 
+              rule is at a higher, or lower, position relative to other rules.
+              li{
+                color: pink;
+                color: blue
+              }
+              ^--In the above example, the text turns pink first, then blue due to following the 
+                 rule of position.
+              Postion applies to everything, including curly braces{}. The further down the code in a external stylesheet 
+              goes:(1.   , only this furthest rule/style will be applied.
+                    2. 
+                    3. )  
+            -->
+<!-- CSS: Specificity- CSS Specificity- How specific a selector is when applying CSS rules to them
+  - Example- 
+      index.html
+      --------------
+      <li id="first-id" class="first-class" draggable> 
+        ^-- This is the opening tag for the list item element.
+      ---------------------  
+      style.css
+      --------------  
+      li{color: blue;}  <-- This line selects all the list items and makes them blue. This line is the least speciic.
+      .first-class{color: red;} <-- This line uses the class selector (.) to specify the color for 'first-class' elements will be red.
+      li[draggable] {color: purple;} <-- This line represents the 'attribute' element being made draggable, and its color turning to purple. The attribute element in most cases overwrites the class selector.
+      #first-id{color: orange;} <-- This line represents the 'id' selector, and changes the 'first-id' to orange. The pound sign ('#') is used for this.
+      
+        -- The id selector has higher importance then the class selector.
+
+      -The elements in the style.css file target and make changes by each
+       specific element. 
+      - In certain code, there will only be one id name.
+-->
+<!-- CSS: Type- Three various types, External, Internal, and Inline
+   - External CSS uses a link refrerence to connect the html file to the CSS file.
+      -<link rel="stylesheet" href="./style.css">
+
+   - Internal is the use of an internal style element that you place CSS inbetween the opening and closing brackets.
+      Internal CSS has second importance. This is because Internal CSS focuses on one webpage, unlike external can be aplied to
+      multiple webpages/websites.
+      - <style> BLANK </style>
+   - Inline is when a specific style is applied through the style attributes(h1) opening tag for a html element. 
+      Inline has the greatest importance because Inline CSS targets only one specific element.
+      - <h1 style=" ">HEEEEEEELLOOOOOOOooooooo</h>
+
+-->
+<!-- CSS: Importance- A keyword that can be used in code, is represented by:
+   - color: red;
+     color: green !importance;
+   - To use the 'importance' keyword, you must add a '!' before it. By using this keyword, no matter how 
+      far down or up in code this is written, the code with the importance keyword will be listed above 
+      all other code.
+
+-->
+    
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cascade</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="outer-box" class="box">
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
