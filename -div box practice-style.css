@@ -1,0 +1,25 @@
+/*CSS for div box practice */
+
+#outer-box{
+  background-color: pink;
+  padding: 10px 10px;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.inner-box{
+  background-color: blue;  
+}
+
+p {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.white-text{
+  color: white;
+}
