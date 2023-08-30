@@ -1,0 +1,53 @@
+<!-- CSS Display Property- Block, Inline, Inline-Block, None-->
+<!-- There are two exercises to do: 
+  1. Solve the first challenge by changing only the display property to show each paragraph horizontally.
+     This is done by changing the display property to 'inline-block'. By setting the display value to this property, 
+     the values can vary, and the paragraph elements will be on the same line. 
+-->
+<!-- The second objective is to dispay the paragraph eleents vertically. To solve this, change each property to 'block'.
+     The block element will take up the whole line, causing each element to line up vertically, and with the full height
+     and width.
+    -->
+<head>
+  <title>CSS Display Property Example</title>
+  <style>
+    p {
+      color: white;
+      text-align: center;
+    }
+
+    .red {
+      display: block;
+      width: 300px;
+      height: 200px;
+      background-color:royalblue;
+      border: solid black;
+    }
+
+    .green {
+      display: block;
+      width: 300px;
+      height: 200px;
+      background-color: greenyellow;
+      border: solid black;
+    }
+
+    .blue {
+      display: block;
+      width: 300px;
+      height: 200px;
+      background-color: palevioletred;
+      border: solid black;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>CSS Display Property</h1>
+  <p class="red">Red Paragraph </p>
+  <p class="green">Green Paragraph</p>
+  <p class="blue">Blue Paragraph</p>
+</body>
+
+</html>
